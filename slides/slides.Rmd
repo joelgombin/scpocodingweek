@@ -1,0 +1,97 @@
+---
+title: "R and data science for public policies"
+subtitle: "Advanced session"
+author: "Joël Gombin, Datactivist"
+date: "21 & 22 January 2019"
+output:
+  SlidesDatactivist::moon_reader:
+    css: [default, datactivist, datactivist-fonts]
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+params:
+  event: Sciences Po coding week
+  slug: codingweek
+---
+
+layout: true
+  
+
+`r paste0("<div class='my-footer'><span>", params$event, "</span> <center><div class=logo><img src='https://github.com/datactivist/slides_datactivist/raw/master/inst/rmarkdown/templates/xaringan/resources/img/fond_noir_monochrome.png' width='100px'></center></span></div>")` 
+
+
+---
+
+class: center, middle
+
+Ces slides en ligne : `r paste0("http://datactivist.coop/", params$slug)`
+
+Sources : `r paste0("https://github.com/datactivist/", params$slug)`
+
+
+Les productions de Datactivist sont librement réutilisables selon les termes de la licence [Creative Commons 4.0 BY-SA](https://creativecommons.org/licenses/by-sa/4.0/legalcode.fr).
+
+<BR>
+<BR>
+
+![](https://mirrors.creativecommons.org/presskit/buttons/88x31/png/by-sa.png)
+
+
+---
+## Who are we?
+
+<BR><BR><BR><BR>
+
+[![](https://github.com/datactivist/slides_datactivist/raw/master/inst/rmarkdown/templates/xaringan/resources/img/logo.png)](https://datactivist.coop)
+
+### We .red[open data], we make them .red[useful]
+
+---
+## Who are we?
+
+
+![](https://www.dropbox.com/s/kicm8kmqal303yc/equipe.jpg?dl=1)
+
+---
+## Who are we?
+
+- Datactivist is an open data pure player, created in 2016 by Samuel Goëta and Joël Gombin.
+
+- Operating at all steps of data opening and reuse, Datactivist works with both data producers and data re-users. 
+
+- Our mission : to reduce information asymmetries, and allow everyone to seize data, without naivety, but without pessimism. 
+
+- a research-driven approach: see **https://datactivist.coop/these**. 
+
+- We created the [#TeamOpenData community](https://teamopendata.org).
+
+---
+class: inverse, center, middle
+
+# The agenda
+
+---
+## The agenda
+
+- using `git` and github to deal with code like a pro
+
+- tidyverse: a refresher
+
+- datavisualisation with `ggplot2`
+
+- mapping data with `banR`, `sf`, `tmap`, `leaflet`...
+
+- using APIs
+
+- wrap-up, tips & tricks
+
+---
+class: inverse, center, middle
+
+# Thank you!
+
+Contact : [joel@datactivist.coop](mailto:joel@datactivist.coop)
+
+

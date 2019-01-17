@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>R and data science for public policies</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Joël Gombin, Datactivist" />
+    <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link href="libs/remark-css-0.0.1/datactivist.css" rel="stylesheet" />
+    <link href="libs/remark-css-0.0.1/datactivist-fonts.css" rel="stylesheet" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# R and data science for public policies
+## Advanced session
+### Joël Gombin, Datactivist
+### 21 &amp; 22 January 2019
+
+---
+
+
+layout: true
+  
+
+&lt;div class='my-footer'&gt;&lt;span&gt;Sciences Po coding week&lt;/span&gt; &lt;center&gt;&lt;div class=logo&gt;&lt;img src='https://github.com/datactivist/slides_datactivist/raw/master/inst/rmarkdown/templates/xaringan/resources/img/fond_noir_monochrome.png' width='100px'&gt;&lt;/center&gt;&lt;/span&gt;&lt;/div&gt; 
+
+
+---
+
+class: center, middle
+
+Ces slides en ligne : http://datactivist.coop/codingweek
+
+Sources : https://github.com/datactivist/codingweek
+
+
+Les productions de Datactivist sont librement réutilisables selon les termes de la licence [Creative Commons 4.0 BY-SA](https://creativecommons.org/licenses/by-sa/4.0/legalcode.fr).
+
+&lt;BR&gt;
+&lt;BR&gt;
+
+![](https://mirrors.creativecommons.org/presskit/buttons/88x31/png/by-sa.png)
+
+
+---
+## Who are we?
+
+&lt;BR&gt;&lt;BR&gt;&lt;BR&gt;&lt;BR&gt;
+
+[![](https://github.com/datactivist/slides_datactivist/raw/master/inst/rmarkdown/templates/xaringan/resources/img/logo.png)](https://datactivist.coop)
+
+### We .red[open data], we make them .red[useful]
+
+---
+## Who are we?
+
+
+![](https://www.dropbox.com/s/kicm8kmqal303yc/equipe.jpg?dl=1)
+
+---
+## Who are we?
+
+- Datactivist is an open data pure player, created in 2016 by Samuel Goëta and Joël Gombin.
+
+- Operating at all steps of data opening and reuse, Datactivist works with both data producers and data re-users. 
+
+- Our mission : to reduce information asymmetries, and allow everyone to seize data, without naivety, but without pessimism. 
+
+- a research-driven approach: see **https://datactivist.coop/these**. 
+
+- We created the [#TeamOpenData community](https://teamopendata.org).
+
+---
+class: inverse, center, middle
+
+# The agenda
+
+---
+## The agenda
+
+- using `git` and github to deal with code like a pro
+
+- tidyverse: a refresher
+
+- datavisualisation with `ggplot2`
+
+- mapping data with `banR`, `sf`, `tmap`, `leaflet`...
+
+- using APIs
+
+- wrap-up, tips &amp; tricks
+
+---
+class: inverse, center, middle
+
+# Thank you!
+
+Contact : [joel@datactivist.coop](mailto:joel@datactivist.coop)
+    </textarea>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function() {
+  var d = document, s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})();</script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+  }
+});
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
