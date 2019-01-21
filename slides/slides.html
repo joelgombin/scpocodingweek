@@ -117,14 +117,307 @@ Git and github are useful for documentation and collaboration.
 ---
 ## Let's git started
 
-First and foremost : **please do use projects in Rstudio**. Then, when you create your project, initiate a git repo too. 
+First and foremost : **please do use projects in Rstudio**. Then, when you create your project, initiate a git repo too. Using [Rmarkdown](http://rmarkdown.rstudio.com/) is a good idea, too. 
 
-![](./img/Peek 21-01-2019 07-15.gif)
+.center[.reduite[![](./img/Peek 21-01-2019 07-15.gif)]]
 
 ---
 ## Let's git started
 
 Then, whenever you have done some significant work, save your script and commit the changes.  
+
+.reduite[![](./img/Peek 21-01-2019 07-31.gif)]
+
+---
+## Let's git started
+
+Finally, sync your changes with github for backup and potential collaboration. 
+
+.reduite[![](./img/createrepo.gif)]
+
+---
+class: inverse, center, middle
+
+# Let's get tidy
+
+---
+## The datascience workflow
+
+&lt;img src="./img/data-science-explore.png" width="90%" style="display: block; margin: auto;" /&gt;
+
+---
+## Installing the tidyverse
+
+- The `tidyverse` (ou hadleyverse) helps making the workflow working
+
+* In order to install the tidyverse, type: `install.packages("tidyverse")` (or through Rstudio)
+
+* `library(tidyverse)` =&gt; loads the package
+
+---
+## Importing data
+
+- button "Import dataset"
+
+- through the CLI: the `readr` for CSV, `haven` for SPSS / SAS / Stata, `readxl` for XLS(X), `rio` for (almost) everything else. 
+
+---
+## Import your first dataset
+
+- load the package: `library(readr)`
+
+- remember to assign the result: 
+
+  `monjeudedonnees &lt;- read_csv("monfichier.csv")` 
+
+- let's import some data!
+
+---
+## Let's play with some data
+
+Download the dataset from https://www.data.gouv.fr/fr/datasets/donnees-du-repertoire-national-des-elus/#resource-community-4e196bc2-6b0a-40e4-b251-4e9e505d55df
+
+
+```r
+suppressPackageStartupMessages(library(tidyverse))
+rne &lt;- read_csv("./data/Repertoire-national-des-elus.csv")
+```
+
+```
+## Parsed with column specification:
+## cols(
+##   .default = col_logical(),
+##   `Nom de l'élu` = col_character(),
+##   `Prénom de l'élu` = col_character(),
+##   `Code sexe` = col_character(),
+##   `Date de naissance` = col_date(format = ""),
+##   `Code profession` = col_character(),
+##   `Libellé de la profession` = col_character(),
+##   Age = col_double(),
+##   `Nombre de mandats` = col_double(),
+##   Fonctions = col_character(),
+##   `Nombre de fonctions` = col_double(),
+##   Identifiant = col_character()
+## )
+```
+
+```
+## See spec(...) for full column specifications.
+```
+
+```
+## Warning: 6 parsing failures.
+##    row         col           expected actual                                      file
+## 118187 Identifiant delimiter or quote      Q './data/Repertoire-national-des-elus.csv'
+## 118187 Identifiant delimiter or quote        './data/Repertoire-national-des-elus.csv'
+## 234535 Identifiant delimiter or quote      G './data/Repertoire-national-des-elus.csv'
+## 234535 Identifiant delimiter or quote        './data/Repertoire-national-des-elus.csv'
+## 358097 Identifiant delimiter or quote      B './data/Repertoire-national-des-elus.csv'
+## ...... ........... .................. ...... .........................................
+## See problems(...) for more details.
+```
+
+## Let's play with some data
+
+If needed, adjust the import process with arguments `col_types`, `locale` or `na`.
+
+---
+## Preparing tidy data
+
+- `dplyr` &amp; `tidyr` mainly
+
+- the pipe: `%&gt;%` (ctrl/cmd + shift + M)
+
+- the verbs: 
+  + `filter` (and `slice`)
+  + `arrange`
+  + `select` (and `rename`)
+  + `distinct`
+  + `mutate` 
+  + `group_by` 
+  + `summarise`
+  + `sample_n` / `sample_frac`
+
+- `stringr` might be a useful companion if you have to deal with characters/strings
+
+---
+## Pivoting
+
+`gather` &amp; `spread`
+
+&lt;img src="http://r4ds.had.co.nz/images/tidy-9.png" width="90%" style="display: block; margin: auto;" /&gt;
+
+---
+## Recoding data
+
+- `recode`
+
+- `case_when`
+
+---
+## Merging datasets
+
+- primary keys and foreign keys
+
+- `left_join`
+- `right_join`
+- `full_join`
+- `inner_join`
+- `semi_join`
+- `anti_join`
+
+---
+## Merging datasets
+
+.center[![source: https://r4ds.had.co.nz/relational-data.html#mutating-joins](https://d33wubrfki0l68.cloudfront.net/108c0749d084c03103f8e1e8276c20e06357b124/5f113/diagrams/join-setup.png)]
+
+.center[![source: https://r4ds.had.co.nz/relational-data.html#mutating-joins](https://d33wubrfki0l68.cloudfront.net/820b012580731f2134f90ee9c6388994c2343683/27703/diagrams/join-setup2.png)]
+
+---
+## Inner join
+
+.center[![](https://d33wubrfki0l68.cloudfront.net/3abea0b730526c3f053a3838953c35a0ccbe8980/7f29b/diagrams/join-inner.png)]
+
+---
+## Outer joins
+
+.reduite[.center[![](https://d33wubrfki0l68.cloudfront.net/9c12ca9e12ed26a7c5d2aa08e36d2ac4fb593f1e/79980/diagrams/join-outer.png)]]
+
+
+---
+## Semi join
+
+.center[![](https://d33wubrfki0l68.cloudfront.net/028065a7f353a932d70d2dfc82bc5c5966f768ad/85a30/diagrams/join-semi.png)]
+
+---
+## Anti join
+
+.center[![](https://d33wubrfki0l68.cloudfront.net/f29a85efd53a079cc84c14ba4ba6894e238c3759/c1408/diagrams/join-anti.png)]
+
+
+---
+## A different matter: binding
+
+- `bind_rows`
+- `bind_cols`
+
+---
+## dplyr tips &amp; tricks 
+
+
+```r
+rne %&gt;% 
+  group_by(`Libellé de la profession`) %&gt;% 
+  summarise(n = n()) %&gt;% 
+  arrange(desc(n))
+```
+
+```
+## # A tibble: 66 x 2
+##    `Libellé de la profession`                n
+##    &lt;chr&gt;                                 &lt;int&gt;
+##  1 Employés (secteur privé)              66163
+##  2 Agriculteurs propriétaires exploit.   46481
+##  3 Retraités salariés privés             42994
+##  4 Autres cadres (secteur privé)         25133
+##  5 Retraités fonct.publique (sf enseig.) 23050
+##  6 Ouvriers (secteur privé)              19393
+##  7 Fonctionnaires de catégorie C         19135
+##  8 Agents technique et techniciens       17692
+##  9 Sans profession déclarée              15562
+## 10 Fonctionnaires de catégorie B         15162
+## # … with 56 more rows
+```
+
+---
+---
+## dplyr tips &amp; tricks 
+
+
+```r
+rne %&gt;% 
+  count(`Libellé de la profession`, sort = TRUE) 
+```
+
+```
+## # A tibble: 66 x 2
+##    `Libellé de la profession`                n
+##    &lt;chr&gt;                                 &lt;int&gt;
+##  1 Employés (secteur privé)              66163
+##  2 Agriculteurs propriétaires exploit.   46481
+##  3 Retraités salariés privés             42994
+##  4 Autres cadres (secteur privé)         25133
+##  5 Retraités fonct.publique (sf enseig.) 23050
+##  6 Ouvriers (secteur privé)              19393
+##  7 Fonctionnaires de catégorie C         19135
+##  8 Agents technique et techniciens       17692
+##  9 Sans profession déclarée              15562
+## 10 Fonctionnaires de catégorie B         15162
+## # … with 56 more rows
+```
+
+---
+class: inverse, center, middle
+
+# Visualising data with `ggplot2`
+
+---
+## The grammar of graphics
+
+
+- data
+
+- aesthetic mapping (`aes`)
+
+- `layer`s : `geom` and `stat`
+
+- `scale`s
+
+- a `coord`inates system
+
+- small multiples (`facet`)
+
+- a thème (`theme`)
+
+---
+
+---
+## The main `geom`s
+
+- `geom_point`
+
+- `geom_line`
+
+- `geom_text`
+
+- `geom_quantile`
+
+- `geom_histogram`
+
+- `geom_density`
+
+- `geom_smooth`
+
+- `geom_bar`
+
+- and even `geom_sf` in conjonction with the `sf` package
+
+---
+## the main `aes`thetics
+
+- `x`
+
+- `y`
+
+- `colour`
+
+- `fill`
+
+- `size`
+
+- line width `lwd`
+
+- line type `lty`
 
 ---
 class: inverse, center, middle

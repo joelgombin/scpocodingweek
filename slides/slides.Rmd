@@ -113,14 +113,241 @@ Git and github are useful for documentation and collaboration.
 ---
 ## Let's git started
 
-First and foremost : **please do use projects in Rstudio**. Then, when you create your project, initiate a git repo too. 
+First and foremost : **please do use projects in Rstudio**. Then, when you create your project, initiate a git repo too. Using [Rmarkdown](http://rmarkdown.rstudio.com/) is a good idea, too. 
 
-![](./img/Peek 21-01-2019 07-15.gif)
+.center[.reduite[![](./img/Peek 21-01-2019 07-15.gif)]]
 
 ---
 ## Let's git started
 
 Then, whenever you have done some significant work, save your script and commit the changes.  
+
+.reduite[![](./img/Peek 21-01-2019 07-31.gif)]
+
+---
+## Let's git started
+
+Finally, sync your changes with github for backup and potential collaboration. 
+
+.reduite[![](./img/createrepo.gif)]
+
+---
+class: inverse, center, middle
+
+# Let's get tidy
+
+---
+## The datascience workflow
+
+```{r, echo = FALSE, out.width='90%', fig.align='center'}
+knitr::include_graphics("./img/data-science-explore.png")
+```
+
+---
+## Installing the tidyverse
+
+- The `tidyverse` (ou hadleyverse) helps making the workflow working
+
+* In order to install the tidyverse, type: `install.packages("tidyverse")` (or through Rstudio)
+
+* `library(tidyverse)` => loads the package
+
+---
+## Importing data
+
+- button "Import dataset"
+
+- through the CLI: the `readr` for CSV, `haven` for SPSS / SAS / Stata, `readxl` for XLS(X), `rio` for (almost) everything else. 
+
+---
+## Import your first dataset
+
+- load the package: `library(readr)`
+
+- remember to assign the result: 
+
+  `monjeudedonnees <- read_csv("monfichier.csv")` 
+
+- let's import some data!
+
+---
+## Let's play with some data
+
+Download the dataset from https://www.data.gouv.fr/fr/datasets/donnees-du-repertoire-national-des-elus/#resource-community-4e196bc2-6b0a-40e4-b251-4e9e505d55df
+
+```{r }
+suppressPackageStartupMessages(library(tidyverse))
+rne <- read_csv("./data/Repertoire-national-des-elus.csv")
+
+```
+
+## Let's play with some data
+
+If needed, adjust the import process with arguments `col_types`, `locale` or `na`.
+
+---
+## Preparing tidy data
+
+- `dplyr` & `tidyr` mainly
+
+- the pipe: `%>%` (ctrl/cmd + shift + M)
+
+- the verbs: 
+  + `filter` (and `slice`)
+  + `arrange`
+  + `select` (and `rename`)
+  + `distinct`
+  + `mutate` 
+  + `group_by` 
+  + `summarise`
+  + `sample_n` / `sample_frac`
+
+- `stringr` might be a useful companion if you have to deal with characters/strings
+
+---
+## Pivoting
+
+`gather` & `spread`
+
+```{r, echo = FALSE, out.width='90%', fig.align='center'}
+knitr::include_graphics("http://r4ds.had.co.nz/images/tidy-9.png")
+```
+
+---
+## Recoding data
+
+- `recode`
+
+- `case_when`
+
+---
+## Merging datasets
+
+- primary keys and foreign keys
+
+- `left_join`
+- `right_join`
+- `full_join`
+- `inner_join`
+- `semi_join`
+- `anti_join`
+
+---
+## Merging datasets
+
+.center[![source: https://r4ds.had.co.nz/relational-data.html#mutating-joins](https://d33wubrfki0l68.cloudfront.net/108c0749d084c03103f8e1e8276c20e06357b124/5f113/diagrams/join-setup.png)]
+
+.center[![source: https://r4ds.had.co.nz/relational-data.html#mutating-joins](https://d33wubrfki0l68.cloudfront.net/820b012580731f2134f90ee9c6388994c2343683/27703/diagrams/join-setup2.png)]
+
+---
+## Inner join
+
+.center[![](https://d33wubrfki0l68.cloudfront.net/3abea0b730526c3f053a3838953c35a0ccbe8980/7f29b/diagrams/join-inner.png)]
+
+---
+## Outer joins
+
+.reduite[.center[![](https://d33wubrfki0l68.cloudfront.net/9c12ca9e12ed26a7c5d2aa08e36d2ac4fb593f1e/79980/diagrams/join-outer.png)]]
+
+
+---
+## Semi join
+
+.center[![](https://d33wubrfki0l68.cloudfront.net/028065a7f353a932d70d2dfc82bc5c5966f768ad/85a30/diagrams/join-semi.png)]
+
+---
+## Anti join
+
+.center[![](https://d33wubrfki0l68.cloudfront.net/f29a85efd53a079cc84c14ba4ba6894e238c3759/c1408/diagrams/join-anti.png)]
+
+
+---
+## A different matter: binding
+
+- `bind_rows`
+- `bind_cols`
+
+---
+## dplyr tips & tricks 
+
+```{r}
+rne %>% 
+  group_by(`Libellé de la profession`) %>% 
+  summarise(n = n()) %>% 
+  arrange(desc(n))
+```
+
+---
+---
+## dplyr tips & tricks 
+
+```{r}
+rne %>% 
+  count(`Libellé de la profession`, sort = TRUE) 
+```
+
+---
+class: inverse, center, middle
+
+# Visualising data with `ggplot2`
+
+---
+## The grammar of graphics
+
+
+- data
+
+- aesthetic mapping (`aes`)
+
+- `layer`s : `geom` and `stat`
+
+- `scale`s
+
+- a `coord`inates system
+
+- small multiples (`facet`)
+
+- a thème (`theme`)
+
+---
+
+---
+## The main `geom`s
+
+- `geom_point`
+
+- `geom_line`
+
+- `geom_text`
+
+- `geom_quantile`
+
+- `geom_histogram`
+
+- `geom_density`
+
+- `geom_smooth`
+
+- `geom_bar`
+
+- and even `geom_sf` in conjonction with the `sf` package
+
+---
+## the main `aes`thetics
+
+- `x`
+
+- `y`
+
+- `colour`
+
+- `fill`
+
+- `size`
+
+- line width `lwd`
+
+- line type `lty`
 
 ---
 class: inverse, center, middle
