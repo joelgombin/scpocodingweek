@@ -352,6 +352,165 @@ class: inverse, center, middle
 ---
 class: inverse, center, middle
 
+# Mapping data
+## Let's indulge in some map porn
+
+---
+## An example of the spatial possibilities of R
+
+https://joelgombin.github.io/makingof
+
+---
+## Spatial tidydata: the `sf` package
+
+Simple features (sf) are:
+- a dataframe
+- one row per feature
+- a list-column for the geometry (point, line, polygon...)
+- geometries and attributes have the same status
+
+---
+## Import spatial data
+
+Source: https://opendata.paris.fr/explore/dataset/sanisettesparis2011/export/
+
+```{r}
+library(sf)
+toilets <- read_sf("./data/sanisettesparis2011.geojson")
+toilets
+```
+
+---
+## Previewing spatial data
+
+```{r, include=FALSE}
+library(mapview)
+mapviewOptions(leafletWidth = 700, leafletHeight = 400)
+```
+
+
+```{r, eval = FALSE}
+library(mapview)
+mapview(toilets)
+```
+
+```{r, echo = FALSE}
+library(widgetframe)
+l0 <- mapview(toilets)
+frameWidget(l0@map)
+```
+
+---
+## Using spatial data
+
+```{r, eval = FALSE}
+library(leaflet)
+leaflet() %>% addTiles() %>% setView(-93.65, 42.0285, zoom = 4) %>%
+  addWMSTiles(
+    "http://mesonet.agron.iastate.edu/cgi-bin/wms/nexrad/n0r.cgi",
+    layers = "nexrad-n0r-900913",
+    options = WMSTileOptions(format = "image/png", transparent = TRUE),
+    attribution = "Weather data © 2012 IEM Nexrad"
+  )
+
+```
+
+```{r, echo = FALSE}
+library(leaflet)
+l3 <- leaflet() %>% addTiles() %>% setView(-93.65, 42.0285, zoom = 4) %>%
+  addWMSTiles(
+    "http://mesonet.agron.iastate.edu/cgi-bin/wms/nexrad/n0r.cgi",
+    layers = "nexrad-n0r-900913",
+    options = WMSTileOptions(format = "image/png", transparent = TRUE),
+    attribution = "Weather data © 2012 IEM Nexrad"
+  )
+frameWidget(l3, height = 250)
+```
+
+---
+## Using `leaflet` for online maps
+
+See https://rstudio.github.io/leaflet/
+
+```{r, eval=FALSE}
+toilets %>% leaflet() %>% addTiles() %>% addCircleMarkers(radius = 2, color = "red")
+
+```
+
+```{r, echo=FALSE}
+l4 <- toilets %>% 
+  leaflet() %>%
+  addTiles() %>%
+  addCircleMarkers(radius = 2, color = "red")
+frameWidget(l4, height = 300)
+```
+
+---
+## Using `tmap` for elaborate maps
+
+```{r, eval = FALSE}
+library(tmap)
+# https://opendata.paris.fr/explore/dataset/voie/export/
+streets <- read_sf("./data/voie.geojson")
+# https://opendata.paris.fr/explore/dataset/arbresremarquablesparis/export/
+trees <- read_sf("./data/arbresremarquablesparis.geojson")
+
+streets %>% 
+  tm_shape() +
+  tm_lines(alpha = 0.2) +
+tm_shape(toilets) +
+  tm_dots(col = "red") +
+tm_shape(trees) +
+  tm_dots(col = "darkgreen") +
+tm_scale_bar(position = c("left", "bottom")) +
+tm_compass(position = c("left", "top"))
+
+```
+
+---
+## Using `tmap` for elaborate maps
+
+```{r, echo = FALSE,fig.align='center'}
+library(tmap)
+# https://opendata.paris.fr/explore/dataset/voie/export/
+streets <- read_sf("./data/voie.geojson")
+# https://opendata.paris.fr/explore/dataset/arbresremarquablesparis/export/
+trees <- read_sf("./data/arbresremarquablesparis.geojson")
+
+streets %>% 
+  tm_shape() +
+  tm_lines(alpha = 0.2) +
+tm_shape(toilets) +
+  tm_dots(col = "red") +
+tm_shape(trees) +
+  tm_dots(col = "darkgreen") +
+tm_scale_bar(position = c("left", "bottom")) +
+tm_compass(position = c("left", "top"))
+
+```
+
+---
+## Other nice spatial stuff
+
+- `banR` for geocoding
+- OpenStreetMap and OverpassTurbo
+- ...
+
+---
+class: inverse, center, middle
+
+# Using APIs
+
+---
+## Calling APIs with `httr`
+
+https://httr.r-lib.org/
+
+https://thinkr.fr/les-api-un-enfer/
+
+---
+class: inverse, center, middle
+
 # Thank you!
 
 Contact : [joel@datactivist.coop](mailto:joel@datactivist.coop)
