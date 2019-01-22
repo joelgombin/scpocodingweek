@@ -90,11 +90,28 @@ rne %>%
   geom_bar() +
   scale_y_continuous(labels = scales::comma)
 
+library(hrbrthemes)
+
+cairo_pdf(file = "./plot1.pdf", width = 7, height = 12)
 rne %>% 
   count(`Libellé de la profession`, sort = TRUE) %>% 
+  filter(!is.na(`Libellé de la profession`)) %>% 
   arrange(n) %>% 
+  filter(n > 1000) %>% 
   mutate(occupation = fct_inorder(`Libellé de la profession`)) %>% 
+  mutate(coord = if_else(n > 40000, n - 2000, n + 2000),
+         colour = if_else(n > 40000, "white", "black")) %>% 
   ggplot(aes(x = occupation, y = n)) +
-  geom_bar(stat = "identity") +
+  geom_bar(stat = "identity", width = 0.8, fill = "#3519c1") +
   scale_y_continuous(labels = scales::comma) +
-  coord_flip()
+  coord_flip() +
+  geom_text(aes(label = occupation, y = coord, colour = colour), hjust = "inward", vjust = "center", size = 2) +
+  scale_color_manual(values = c("#3519c1", "white"), guide = FALSE) +
+  xlab("") +
+  ylab("") +
+  ylim(0, NA) +
+  scale_x_discrete(labels = NULL) +
+  theme(axis.ticks.y = element_blank()) +
+  theme_ipsum(grid = "X") +
+  labs(title = "Most elected officials are employees, farmers or retired.", subtitle = "Number of elected officials in France in 2018 by occupation.", caption = "Source: RNE (Ministère de l'intérieur), computation by Sciences Po students.")
+dev.off()
