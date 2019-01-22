@@ -1,0 +1,236 @@
+{
+  "type": "FeatureCollection",
+  "generator": "overpass-ide",
+  "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
+  "timestamp": "2019-01-22T13:56:02Z",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/881090108",
+        "amenity": "place_of_worship",
+        "denomination": "sunni",
+        "name": "Mosquée 'Ali Ibn Al Khattab",
+        "religion": "muslim"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.3546804,
+          48.8735147
+        ]
+      },
+      "id": "node/881090108"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/881090190",
+        "amenity": "place_of_worship",
+        "denomination": "sunni",
+        "name": "Mosquée Al-Fatih",
+        "religion": "muslim"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.3544129,
+          48.8725743
+        ]
+      },
+      "id": "node/881090190"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/881308332",
+        "amenity": "place_of_worship",
+        "denomination": "sunni",
+        "name": "Mosquée de Paris 15ème",
+        "religion": "muslim"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2826721,
+          48.845432
+        ]
+      },
+      "id": "node/881308332"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/881330268",
+        "amenity": "place_of_worship",
+        "denomination": "sunni",
+        "name": "Association Culturelle des Musulmans",
+        "religion": "muslim"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.3808,
+          48.8679601
+        ]
+      },
+      "id": "node/881330268"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1310649550",
+        "amenity": "place_of_worship",
+        "name": "Masjîd de la Fraternité",
+        "religion": "muslim"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.3819002,
+          48.9053922
+        ]
+      },
+      "id": "node/1310649550"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2757989574",
+        "addr:city": "Paris",
+        "addr:housenumber": "77",
+        "addr:postcode": "75018",
+        "addr:street": "Rue Philippe de Girard",
+        "amenity": "place_of_worship",
+        "name": "Abdoulmajid",
+        "religion": "muslim"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.3607162,
+          48.8876146
+        ]
+      },
+      "id": "node/2757989574"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2758048825",
+        "addr:city": "Paris",
+        "addr:housenumber": "39",
+        "addr:postcode": "75019",
+        "addr:street": "Rue de Tanger",
+        "amenity": "place_of_worship",
+        "name": "Mosquée A Daawa",
+        "religion": "muslim"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.369842,
+          48.887437
+        ]
+      },
+      "id": "node/2758048825"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2851874968",
+        "addr:city": "Levallois-Perret",
+        "addr:postcode": "92532",
+        "amenity": "place_of_worship",
+        "fixme": "L'adresse semble avoir changé, à vérifier",
+        "name": "Mosquée de Levallois",
+        "religion": "muslim"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.3002712,
+          48.8940926
+        ]
+      },
+      "id": "node/2851874968"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3166180740",
+        "amenity": "place_of_worship",
+        "denomination": "sunni",
+        "name": "Salle de prière La Vilette",
+        "religion": "muslim"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.3838747,
+          48.8847727
+        ]
+      },
+      "id": "node/3166180740"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3360104857",
+        "amenity": "place_of_worship",
+        "contact:housenumber": "63",
+        "contact:street": "Rue du Chevaleret",
+        "name": "masjid Alrahmen",
+        "religion": "muslim"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.3764586,
+          48.8281555
+        ]
+      },
+      "id": "node/3360104857"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3360104858",
+        "addr:housenumber": "35",
+        "addr:street": "Cité industrielle",
+        "amenity": "place_of_worship",
+        "name": "Association islamique en France",
+        "religion": "muslim"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.3801584,
+          48.8595128
+        ]
+      },
+      "id": "node/3360104858"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5993664558",
+        "addr:city": "Paris",
+        "addr:housenumber": "28",
+        "addr:postcode": "75018",
+        "addr:street": "Rue Myrha",
+        "amenity": "place_of_worship",
+        "name": "Khalid Ibn Walid",
+        "religion": "muslim"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.3540843,
+          48.8872341
+        ]
+      },
+      "id": "node/5993664558"
+    }
+  ]
+}

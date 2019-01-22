@@ -1,0 +1,1303 @@
+{
+  "type": "FeatureCollection",
+  "generator": "overpass-ide",
+  "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
+  "timestamp": "2019-01-22T13:57:02Z",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/255448679",
+        "amenity": "place_of_worship",
+        "denomination": "catholic",
+        "name": "Chapelle Notre-Dame de Bonne Délivrance",
+        "ref:FR:CEF": "92051_06",
+        "religion": "christian",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.263173,
+          48.889801
+        ]
+      },
+      "id": "node/255448679"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/257082085",
+        "amenity": "place_of_worship",
+        "denomination": "catholic",
+        "name": "Chapelle Saint-Vincent de Paul",
+        "religion": "christian",
+        "wikidata": "Q2957025"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.3218448,
+          48.8488472
+        ]
+      },
+      "id": "node/257082085"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/281160494",
+        "amenity": "place_of_worship",
+        "name": "Église réformée",
+        "religion": "christian"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.3117168,
+          48.8176105
+        ]
+      },
+      "id": "node/281160494"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/325986326",
+        "amenity": "place_of_worship",
+        "denomination": "evangelical",
+        "name": "Temple de Bethel",
+        "religion": "christian"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.324511,
+          48.9042834
+        ]
+      },
+      "id": "node/325986326"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/428049815",
+        "amenity": "place_of_worship",
+        "checked": "2015-11-29",
+        "denomination": "catholic",
+        "level": "0",
+        "name": "Chapelle de l'Agneau de Dieu",
+        "ref:FR:CEF": "75112_07",
+        "religion": "christian",
+        "source": "survey 2015",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.377527,
+          48.844602
+        ]
+      },
+      "id": "node/428049815"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/529117317",
+        "addr:housenumber": "130",
+        "addr:street": "Boulevard de l'Hôpital",
+        "amenity": "place_of_worship",
+        "denomination": "seventh_day_adventist",
+        "name": "Église Adventiste du 7e jour Paris-Sud",
+        "religion": "christian"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.3572209,
+          48.834308
+        ]
+      },
+      "id": "node/529117317"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/890232520",
+        "amenity": "place_of_worship",
+        "denomination": "protestant",
+        "name": "Maison Verte",
+        "religion": "christian"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.3413495,
+          48.8912148
+        ]
+      },
+      "id": "node/890232520"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/913121651",
+        "addr:city": "Paris",
+        "addr:country": "FR",
+        "addr:housenumber": "32",
+        "addr:postcode": "75013",
+        "addr:street": "Rue Hélène Brion",
+        "amenity": "place_of_worship",
+        "denomination": "catholic",
+        "name": "Aumônerie des Grands Moulins",
+        "phone": "+33145829336",
+        "religion": "christian",
+        "website": "aumoneriedesgrandsmoulins.fr",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.3803695,
+          48.8279912
+        ]
+      },
+      "id": "node/913121651"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1014690269",
+        "amenity": "place_of_worship",
+        "name": "Chapelle Sainte-Marie",
+        "religion": "christian",
+        "url": "http://www.mariavite.org/chparis.htm",
+        "wikidata": "Q819290",
+        "wikipedia": "fr:Église mariavite"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.3571857,
+          48.8587314
+        ]
+      },
+      "id": "node/1014690269"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1044958380",
+        "amenity": "place_of_worship",
+        "name": "Église Notre-Dame de Chaldée",
+        "religion": "christian",
+        "wikidata": "Q15958170"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.3605852,
+          48.8857312
+        ]
+      },
+      "id": "node/1044958380"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1243135651",
+        "amenity": "place_of_worship",
+        "denomination": "evangelical",
+        "religion": "christian"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.4061399,
+          48.8359385
+        ]
+      },
+      "id": "node/1243135651"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1244411717",
+        "amenity": "place_of_worship",
+        "denomination": "orthodox",
+        "name": "Chapelle Orthodoxe",
+        "religion": "christian",
+        "source": "survey"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.3042494,
+          48.8468885
+        ]
+      },
+      "id": "node/1244411717"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1400055486",
+        "amenity": "place_of_worship",
+        "name": "Centre Évangélique Philadelphia",
+        "religion": "christian"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.3931564,
+          48.8549579
+        ]
+      },
+      "id": "node/1400055486"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1509815571",
+        "alt_name": "Église des Saints Constantin et Hélène",
+        "amenity": "place_of_worship",
+        "denomination": "orthodox",
+        "name": "Église Orthodoxe Grecque",
+        "operator": "Patriarcat de Constantinople (Métropole Grecque)",
+        "phone": "+33 1 48 78 35 53",
+        "religion": "christian",
+        "service_times": "Su 10:00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.3383243,
+          48.8781729
+        ]
+      },
+      "id": "node/1509815571"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1909843342",
+        "amenity": "place_of_worship",
+        "name": "Église évangélique du tabernacle",
+        "religion": "christian"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.3317602,
+          48.8958412
+        ]
+      },
+      "id": "node/1909843342"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2042328841",
+        "access": "private",
+        "amenity": "place_of_worship",
+        "name": "Chapelle communauté de l'Emmanuel",
+        "religion": "christian",
+        "source": "local knowledge"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2547563,
+          48.8848959
+        ]
+      },
+      "id": "node/2042328841"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2108373214",
+        "amenity": "place_of_worship",
+        "denomination": "protestant",
+        "name": "Calvary Chapel",
+        "religion": "christian"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.3823706,
+          48.8457158
+        ]
+      },
+      "id": "node/2108373214"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2194937758",
+        "addr:housenumber": "85",
+        "addr:postcode": "75014",
+        "addr:street": "Rue d'Alésia",
+        "amenity": "place_of_worship",
+        "denomination": "reformed",
+        "name": "Église Protestante - Paris Alésia",
+        "religion": "christian",
+        "website": "http://www.eelparis.org"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.3275992,
+          48.827723
+        ]
+      },
+      "id": "node/2194937758"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2206863777",
+        "amenity": "place_of_worship",
+        "denomination": "evangelical",
+        "religion": "christian"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.398584,
+          48.874214
+        ]
+      },
+      "id": "node/2206863777"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2273101068",
+        "amenity": "place_of_worship",
+        "contact:housenumber": "23",
+        "contact:postcode": "75014",
+        "contact:street": "Rue Beaunier",
+        "name": "Église baptiste du centre",
+        "religion": "christian",
+        "website": "http://ebc.paris.free.fr"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.3294043,
+          48.8241951
+        ]
+      },
+      "id": "node/2273101068"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2413599122",
+        "addr:city": "Paris",
+        "addr:housenumber": "56",
+        "addr:postcode": "75017",
+        "addr:street": "Rue Pouchet",
+        "amenity": "place_of_worship",
+        "denomination": "jehovahs_witness",
+        "name": "Salle du Royaume des Témoins de Jéhovah de Paris Clichy",
+        "religion": "christian",
+        "service_times": "Su 10:00",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.3212156,
+          48.894757
+        ]
+      },
+      "id": "node/2413599122"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2516318631",
+        "amenity": "place_of_worship",
+        "denomination": "catholic",
+        "name": "Chapelle Saint-Martin de Porrès",
+        "religion": "christian"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2870351,
+          48.8869659
+        ]
+      },
+      "id": "node/2516318631"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2526842435",
+        "alt_name": "Chapelle catholique des quatre Évangélistes",
+        "amenity": "place_of_worship",
+        "name": "Chapelle catholique des 4 Évangélistes",
+        "religion": "christian"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.3634069,
+          48.8955708
+        ]
+      },
+      "id": "node/2526842435"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2604947288",
+        "amenity": "place_of_worship",
+        "building": "chapel",
+        "denomination": "catholic",
+        "name": "Chapelle des Franciscaines",
+        "religion": "christian"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2942727,
+          48.8850482
+        ]
+      },
+      "id": "node/2604947288"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2604959465",
+        "amenity": "place_of_worship",
+        "building": "chapel",
+        "denomination": "catholic",
+        "religion": "christian"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.3270884,
+          48.8457586
+        ]
+      },
+      "id": "node/2604959465"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2605036743",
+        "amenity": "place_of_worship",
+        "building": "chapel",
+        "denomination": "catholic",
+        "religion": "christian"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.3648321,
+          48.8529574
+        ]
+      },
+      "id": "node/2605036743"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2605056283",
+        "amenity": "place_of_worship",
+        "denomination": "catholic",
+        "name": "Chapelle Notre-Dame de Sainte-Croix",
+        "religion": "christian"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.280812,
+          48.882602
+        ]
+      },
+      "id": "node/2605056283"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2606259280",
+        "amenity": "place_of_worship",
+        "community": "IBP",
+        "denomination": "catholic",
+        "name": "Centre Saint-Paul",
+        "phone": "+33 9 52 21 77 89",
+        "religion": "christian",
+        "service_times": "Su 09:00,10:00,11:15,12:30,19:00; Mo-Fr 08:00,12:30,19:00; Sa 12:30,19:00",
+        "short_name": "CCCSP",
+        "wheelchair": "limited"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.3443989,
+          48.8686052
+        ]
+      },
+      "id": "node/2606259280"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2606289749",
+        "amenity": "place_of_worship",
+        "denomination": "catholic",
+        "name": "Chapelle Notre-Dame de la Confiance",
+        "ref:FR:CEF": "75117_02",
+        "religion": "christian",
+        "website": "http://ndconfiance.free.fr"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.3068904,
+          48.8903038
+        ]
+      },
+      "id": "node/2606289749"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2608271092",
+        "amenity": "place_of_worship",
+        "denomination": "catholic",
+        "name": "Chapelle Sainte-Marie",
+        "religion": "christian"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.281231,
+          48.885228
+        ]
+      },
+      "id": "node/2608271092"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2653700657",
+        "addr:city": "Paris",
+        "addr:postcode": "75004",
+        "addr:street": "Quai des Célestins",
+        "amenity": "place_of_worship",
+        "denomination": "catholic",
+        "religion": "christian",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.3623262,
+          48.8515711
+        ]
+      },
+      "id": "node/2653700657"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2656649648",
+        "amenity": "place_of_worship",
+        "building": "chapel",
+        "denomination": "evangelical",
+        "name": "Église protestante évangélique des Ternes",
+        "religion": "christian"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2887869,
+          48.8811804
+        ]
+      },
+      "id": "node/2656649648"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2657505258",
+        "addr:city": "Paris",
+        "addr:housename": "Eglise de l'Espérance",
+        "addr:housenumber": "13",
+        "addr:postcode": "75005",
+        "addr:street": "Rue Gracieuse",
+        "amenity": "place_of_worship",
+        "denomination": "seventh_day_adventist",
+        "name": "Église Adventiste du 7e Jour",
+        "religion": "christian"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.3513701,
+          48.8424086
+        ]
+      },
+      "id": "node/2657505258"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2675730793",
+        "amenity": "place_of_worship",
+        "denomination": "catholic",
+        "name": "Église Sainte-Colette des Buttes-Chaumont",
+        "ref:FR:CEF": "75119_11",
+        "religion": "christian",
+        "wikidata": "Q3584965"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.3865956,
+          48.8839482
+        ]
+      },
+      "id": "node/2675730793"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2763883283",
+        "addr:city": "Paris",
+        "addr:housenumber": "39",
+        "addr:postcode": "75016",
+        "addr:street": "Rue François Gérard",
+        "amenity": "place_of_worship",
+        "denomination": "greek_catholic",
+        "name": "Église Catholique Russe",
+        "religion": "christian"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.271084,
+          48.848634
+        ]
+      },
+      "id": "node/2763883283"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2792153924",
+        "addr:city": "Neuilly-sur-Seine",
+        "addr:housenumber": "46",
+        "addr:street": "Avenue du Roule",
+        "amenity": "place_of_worship",
+        "denomination": "catholic",
+        "religion": "christian"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.278227,
+          48.882518
+        ]
+      },
+      "id": "node/2792153924"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2808787632",
+        "amenity": "place_of_worship",
+        "building": "chapel",
+        "denomination": "catholic",
+        "name": "Chapelle",
+        "operator": "FSSPX",
+        "religion": "christian"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.3288086,
+          48.850664
+        ]
+      },
+      "id": "node/2808787632"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2928122198",
+        "amenity": "place_of_worship",
+        "building": "church",
+        "denomination": "mariavite",
+        "name": "Église Mariavite Sainte-Marie",
+        "religion": "christian"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.348639,
+          48.8718009
+        ]
+      },
+      "id": "node/2928122198"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3030132441",
+        "amenity": "place_of_worship",
+        "denomination": "catholic",
+        "name": "Chapelle Saint-André",
+        "religion": "christian"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.35088,
+          48.845879
+        ]
+      },
+      "id": "node/3030132441"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3032793634",
+        "amenity": "place_of_worship",
+        "building": "church",
+        "denomination": "catholic",
+        "name": "Chapelle Saint-Louis",
+        "religion": "christian"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.3035652,
+          48.8527313
+        ]
+      },
+      "id": "node/3032793634"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3032873583",
+        "alt_name": "Martyrium de Montmartre",
+        "amenity": "place_of_worship",
+        "denomination": "catholic",
+        "name": "Crypte du Martyrium de Saint-Denis",
+        "religion": "christian",
+        "wikidata": "Q167599"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.340168,
+          48.8840568
+        ]
+      },
+      "id": "node/3032873583"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3041928034",
+        "amenity": "place_of_worship",
+        "denomination": "catholic",
+        "name": "Chapelle",
+        "religion": "christian"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.347267,
+          48.846155
+        ]
+      },
+      "id": "node/3041928034"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3080110540",
+        "amenity": "place_of_worship",
+        "denomination": "catholic",
+        "religion": "christian"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.277426,
+          48.886885
+        ]
+      },
+      "id": "node/3080110540"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3080122533",
+        "amenity": "place_of_worship",
+        "denomination": "catholic",
+        "religion": "christian"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.277429,
+          48.886887
+        ]
+      },
+      "id": "node/3080122533"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3111840468",
+        "addr:city": "Paris",
+        "addr:housenumber": "8",
+        "addr:postcode": "75008",
+        "addr:street": "Rue François 1er",
+        "amenity": "place_of_worship",
+        "community": "AA",
+        "community:fr": "Assomptionnistes",
+        "community:gender": "male",
+        "contact:phone": "+33 1 77 45 89 11",
+        "denomination": "catholic",
+        "name": "Communauté assomptionniste Saint-Vincent-de-Paul",
+        "religion": "christian"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.3090996,
+          48.8657148
+        ]
+      },
+      "id": "node/3111840468"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3214567761",
+        "amenity": "place_of_worship",
+        "denomination": "catholic",
+        "name": "Chapelle",
+        "religion": "christian"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.256896,
+          48.841405
+        ]
+      },
+      "id": "node/3214567761"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3294531294",
+        "amenity": "place_of_worship",
+        "denomination": "roman_catholic",
+        "name": "Notre-Dame sous Terre",
+        "religion": "christian"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.3274104,
+          48.8457042
+        ]
+      },
+      "id": "node/3294531294"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3383408841",
+        "amenity": "place_of_worship",
+        "denomination": "catholic",
+        "name": "Dupanloup",
+        "religion": "christian",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.249602,
+          48.8447854
+        ]
+      },
+      "id": "node/3383408841"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3405330999",
+        "amenity": "place_of_worship",
+        "building": "chapel",
+        "denomination": "catholic",
+        "level": "0",
+        "name": "Chapelle Saint-Patrick",
+        "religion": "christian",
+        "source": "survey",
+        "website": "http://www.irishchaplaincyparis.fr/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.3460288,
+          48.8439673
+        ]
+      },
+      "id": "node/3405330999"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3419452608",
+        "addr:city": "Clichy",
+        "addr:housenumber": "8",
+        "addr:postcode": "92110",
+        "addr:street": "Rue d'Alsace",
+        "amenity": "place_of_worship",
+        "denomination": "orthodox",
+        "name": "Parohia Ortodoxă Română \"Pogorârea Duhului Sfânt\" Paris 1",
+        "religion": "christian",
+        "source": "http://paris.mae.ro/node/287"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.3138459,
+          48.9011318
+        ]
+      },
+      "id": "node/3419452608"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3419671567",
+        "addr:city": "Paris",
+        "addr:housenumber": "40",
+        "addr:postcode": "75011",
+        "addr:street": "Rue Saint-Bernard",
+        "amenity": "place_of_worship",
+        "denomination": "orthodox",
+        "name": "Parohia Ortodoxă Română \"Sfânta Genoveva\" și \"Sfântul Martin\" Paris 3",
+        "religion": "christian",
+        "source": "http://paris.mae.ro/node/287"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.3807821,
+          48.8532383
+        ]
+      },
+      "id": "node/3419671567"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3419684098",
+        "addr:city": "Paris",
+        "addr:housenumber": "15",
+        "addr:postcode": "75009",
+        "addr:street": "Rue de Douai",
+        "amenity": "place_of_worship",
+        "denomination": "orthodox",
+        "name": "Parohia Ortodoxă Română \"Sfântul Ioan Casian\" și \"Sfânta Genoveva\" Paris 4",
+        "religion": "christian",
+        "source": "http://paris.mae.ro/node/287"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.334917,
+          48.8815623
+        ]
+      },
+      "id": "node/3419684098"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3970746102",
+        "addr:city": "Paris",
+        "addr:housenumber": "46",
+        "addr:postcode": "75011",
+        "addr:street": "Rue de Montreuil",
+        "amenity": "place_of_worship",
+        "name": "Mission catholique italienne",
+        "religion": "christian"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.3884949,
+          48.850155
+        ]
+      },
+      "id": "node/3970746102"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4347317591",
+        "amenity": "place_of_worship",
+        "denomination": "mormon",
+        "name": "Église de Jésus-Christ des Saints des Derniers Jours",
+        "religion": "christian"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.3531152,
+          48.8593758
+        ]
+      },
+      "id": "node/4347317591"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4375606406",
+        "addr:housenumber": "57",
+        "addr:street": "Rue du Simplon",
+        "amenity": "place_of_worship",
+        "denomination": "catholic",
+        "name": "Chapelle Saint-Jean-XXIII",
+        "name:en": "Chapel St John XXIII",
+        "religion": "christian",
+        "website": "http://www.chemin-neuf.fr"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.3459595,
+          48.8948573
+        ]
+      },
+      "id": "node/4375606406"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4416566413",
+        "amenity": "place_of_worship",
+        "building": "chapel",
+        "denomination": "catholic",
+        "religion": "christian"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.3425414,
+          48.8360852
+        ]
+      },
+      "id": "node/4416566413"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4445875490",
+        "amenity": "place_of_worship",
+        "building": "temple",
+        "denomination": "protestant",
+        "name": "Temple Milton",
+        "religion": "christian"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.3404573,
+          48.8772382
+        ]
+      },
+      "id": "node/4445875490"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4501056845",
+        "amenity": "place_of_worship",
+        "building": "chapel",
+        "denomination": "catholic",
+        "name": "Chapelle Saint-Joseph des Épinettes",
+        "religion": "christian",
+        "wikidata": "Q26936779"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.3236708,
+          48.8961927
+        ]
+      },
+      "id": "node/4501056845"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4536055835",
+        "amenity": "place_of_worship",
+        "building": "church",
+        "denomination": "catholic",
+        "name": "Église Saint-Albert le Grand",
+        "name:de": "St. Albertus Magnus",
+        "religion": "christian",
+        "wikidata": "Q2316919"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2775388,
+          48.8687696
+        ]
+      },
+      "id": "node/4536055835"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4579195553",
+        "access": "private",
+        "amenity": "place_of_worship",
+        "building": "chapel",
+        "denomination": "catholic",
+        "location": "underground",
+        "name": "Crypte Notre-Dame des Champs",
+        "religion": "christian",
+        "website": "http://www.net1901.org/association/ASSOCIATION-POUR-LA-SAUVEGARDE-DE-LA-CRYPTE-NOTRE-DAME-DES-CHAMPS-A.S.C.N.D.C,1046672.html"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.339935,
+          48.8416096
+        ]
+      },
+      "id": "node/4579195553"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5028657921",
+        "amenity": "place_of_worship",
+        "denomination": "catholic",
+        "name": "Chapelle",
+        "religion": "christian"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.294277,
+          48.839499
+        ]
+      },
+      "id": "node/5028657921"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5109337573",
+        "addr:city": "Paris",
+        "addr:housenumber": "4",
+        "addr:postcode": "75005",
+        "addr:street": "Rue Saint-Victor",
+        "amenity": "place_of_worship",
+        "denomination": "russian_orthodox",
+        "name": "Église orthodoxe Notre-Dame-Joie-des-Affligés-et-Sainte-Geneviève",
+        "phone": "+33 6 98 65 48 49",
+        "religion": "christian",
+        "website": "http://ndjasg.free.fr/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.3515322,
+          48.848058
+        ]
+      },
+      "id": "node/5109337573"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5581293780",
+        "addr:city": "Montrouge",
+        "addr:housenumber": "93",
+        "addr:postcode": "92120",
+        "addr:street": "Avenue de la République",
+        "amenity": "place_of_worship",
+        "email": "evidence@club-internet.fr",
+        "name": "Centre évangélique international Évidence",
+        "phone": "+33.1 42 53 61 08",
+        "religion": "christian",
+        "website": "http://www.centre-evidence.com/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.3172515,
+          48.8145108
+        ]
+      },
+      "id": "node/5581293780"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5702227122",
+        "amenity": "place_of_worship",
+        "denomination": "orthodox",
+        "name": "Église Orthodoxe Russe",
+        "religion": "christian",
+        "source": "survey 2018"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2614591,
+          48.8409162
+        ]
+      },
+      "id": "node/5702227122"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5935316110",
+        "addr:city": "Paris",
+        "addr:housenumber": "65",
+        "addr:postcode": "75009",
+        "addr:street": "Boulevard de Clichy",
+        "amenity": "place_of_worship",
+        "religion": "christian",
+        "source": "survey;local knowledge",
+        "survey:date": "2018-09-08"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.3317181,
+          48.8837906
+        ]
+      },
+      "id": "node/5935316110"
+    }
+  ]
+}
