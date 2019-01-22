@@ -92,21 +92,26 @@ rne %>%
 
 library(hrbrthemes)
 
-cairo_pdf(file = "./plot1.pdf", width = 7, height = 12)
+cairo_pdf(file = "./plot1.pdf", width = 12, height = 7)
 rne %>% 
-  count(`Libellé de la profession`, sort = TRUE) %>% 
-  filter(!is.na(`Libellé de la profession`)) %>% 
-  arrange(n) %>% 
+  mutate(gender = recode(`Code sexe`, "M" = "Male", "F" = "Female")) %>% 
+  count(`Libellé de la profession`, gender, sort = TRUE) %>% 
+  filter(!is.na(`Libellé de la profession`)) %>%
+  ungroup %>% 
+  arrange(gender, n) %>% 
   filter(n > 1000) %>% 
+  mutate(order = row_number()) %>% 
   mutate(occupation = fct_inorder(`Libellé de la profession`)) %>% 
-  mutate(coord = if_else(n > 40000, n - 2000, n + 2000),
-         colour = if_else(n > 40000, "white", "black")) %>% 
-  ggplot(aes(x = occupation, y = n)) +
-  geom_bar(stat = "identity", width = 0.8, fill = "#3519c1") +
+  mutate(coord = if_else(n > 22000, n - 1000, n + 1000),
+         colour = if_else(n > 22000, "white", "black")) %>% 
+  ggplot(aes(x = order, y = n)) +
+  geom_bar(aes(fill = gender), stat = "identity", width = 0.8) +
+  scale_fill_discrete(guide = FALSE) + 
   scale_y_continuous(labels = scales::comma) +
   coord_flip() +
   geom_text(aes(label = occupation, y = coord, colour = colour), hjust = "inward", vjust = "center", size = 2) +
-  scale_color_manual(values = c("#3519c1", "white"), guide = FALSE) +
+  scale_color_manual(values = c("black", "white"), guide = FALSE) +
+  facet_wrap(facets = vars(gender), scales = "free_y") +
   xlab("") +
   ylab("") +
   ylim(0, NA) +
