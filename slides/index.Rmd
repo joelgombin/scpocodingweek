@@ -99,6 +99,8 @@ class: inverse, center, middle
 
 - Is git installed on your computer? Do you have a github account? 
 
+If this doesn't work, you can use https://frama.link/codingweek
+
 ---
 ## Let's git started
 
@@ -389,7 +391,7 @@ mapviewOptions(leafletWidth = 700, leafletHeight = 400)
 
 ```{r, eval = FALSE}
 library(mapview)
-mapview(velib)
+mapview(velib, cex = "nbbike")
 ```
 
 ```{r, echo = FALSE}
