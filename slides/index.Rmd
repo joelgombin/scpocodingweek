@@ -2,7 +2,7 @@
 title: "R and data science for public policies"
 subtitle: "Advanced session"
 author: "Joël Gombin, Datactivist"
-date: "21 & 22 January 2019"
+date: "17 & 18 January 2020"
 output:
   SlidesDatactivist::moon_reader:
     css: [default, datactivist, datactivist-fonts]
@@ -26,12 +26,12 @@ layout: true
 
 class: center, middle
 
-Ces slides en ligne : https://joelgombin.github.io/scpocodingweek/slides/
+This slidedeck online : https://joelgombin.github.io/scpocodingweek/slides/
 
 Sources : https://github.com/joelgombin/scpocodingweek
 
 
-Les productions de Datactivist sont librement réutilisables selon les termes de la licence [Creative Commons 4.0 BY-SA](https://creativecommons.org/licenses/by-sa/4.0/legalcode.fr).
+Datactivist's (and my) work is placed under a [Creative Commons 4.0 BY-SA](https://creativecommons.org/licenses/by-sa/4.0/legalcode.fr) licence.
 
 <BR>
 <BR>
@@ -139,14 +139,14 @@ class: inverse, center, middle
 ---
 ## The datascience workflow
 
-```{r, echo = FALSE, out.width='90%', fig.align='center'}
-knitr::include_graphics("./img/data-science-explore.png")
-```
+.center[
+[![](./img/data-science.png)](https://r4ds.had.co.nz/introduction.html)
+]
 
 ---
 ## Installing the tidyverse
 
-- The `tidyverse` (ou hadleyverse) helps making the workflow working
+- The `{tidyverse}` helps making the workflow working
 
 * In order to install the tidyverse, type: `install.packages("tidyverse")` (or through Rstudio)
 
@@ -157,7 +157,7 @@ knitr::include_graphics("./img/data-science-explore.png")
 
 - button "Import dataset"
 
-- through the CLI: the `readr` for CSV, `haven` for SPSS / SAS / Stata, `readxl` for XLS(X), `rio` for (almost) everything else. 
+- through the CLI: the `{readr}` package for CSV/text files, `{haven}` for SPSS / SAS / Stata, `{readxl}` for XLS(X), `{rio}` for (almost) everything else. 
 
 ---
 ## Import your first dataset
@@ -207,7 +207,7 @@ If needed, adjust the import process with arguments `col_types`, `locale` or `na
 ---
 ## Pivoting
 
-`gather` & `spread`
+[`tidyr::pivot_longer` & `tidyr::pivot_wider`](https://tidyr.tidyverse.org/articles/pivot.html)
 
 ```{r, echo = FALSE, out.width='90%', fig.align='center'}
 knitr::include_graphics("http://r4ds.had.co.nz/images/tidy-9.png")
@@ -216,9 +216,9 @@ knitr::include_graphics("http://r4ds.had.co.nz/images/tidy-9.png")
 ---
 ## Recoding data
 
-- `recode`
+- [`recode`](https://dplyr.tidyverse.org/reference/recode.html)
 
-- `case_when`
+- [`case_when`](https://dplyr.tidyverse.org/reference/case_when.html)
 
 ---
 ## Merging datasets
@@ -278,7 +278,6 @@ rne %>%
 ```
 
 ---
----
 ## dplyr tips & tricks 
 
 ```{r}
@@ -307,9 +306,8 @@ class: inverse, center, middle
 
 - small multiples (`facet`)
 
-- a thème (`theme`)
+- a `theme`
 
----
 
 ---
 ## The main `geom`s
@@ -330,7 +328,7 @@ class: inverse, center, middle
 
 - `geom_bar`
 
-- and even `geom_sf` in conjonction with the `sf` package
+- and even `geom_sf` in conjonction with the `sf` package for spatial data
 
 ---
 ## the main `aes`thetics
@@ -372,12 +370,12 @@ Simple features (sf) are:
 ---
 ## Import spatial data
 
-Source: https://opendata.paris.fr/explore/dataset/sanisettesparis2011/export/
+Source: https://opendata.paris.fr/explore/dataset/velib-disponibilite-en-temps-reel/export/
 
 ```{r}
 library(sf)
-toilets <- read_sf("./data/sanisettesparis2011.geojson")
-toilets
+velib <- read_sf("./data/velib-disponibilite-en-temps-reel.geojson")
+velib
 ```
 
 ---
@@ -391,12 +389,12 @@ mapviewOptions(leafletWidth = 700, leafletHeight = 400)
 
 ```{r, eval = FALSE}
 library(mapview)
-mapview(toilets)
+mapview(velib)
 ```
 
 ```{r, echo = FALSE}
 library(widgetframe)
-l0 <- mapview(toilets)
+l0 <- mapview(velib, cex = "nbbike")
 frameWidget(l0@map)
 ```
 
@@ -433,12 +431,12 @@ frameWidget(l3, height = 250)
 See https://rstudio.github.io/leaflet/
 
 ```{r, eval=FALSE}
-toilets %>% leaflet() %>% addTiles() %>% addCircleMarkers(radius = 2, color = "red")
+velib %>% leaflet() %>% addTiles() %>% addCircleMarkers(radius = 2, color = "red")
 
 ```
 
 ```{r, echo=FALSE}
-l4 <- toilets %>% 
+l4 <- velib %>% 
   leaflet() %>%
   addTiles() %>%
   addCircleMarkers(radius = 2, color = "red")
@@ -480,7 +478,7 @@ trees <- read_sf("./data/arbresremarquablesparis.geojson")
 streets %>% 
   tm_shape() +
   tm_lines(alpha = 0.2) +
-tm_shape(toilets) +
+tm_shape(velib) +
   tm_dots(col = "red") +
 tm_shape(trees) +
   tm_dots(col = "darkgreen") +

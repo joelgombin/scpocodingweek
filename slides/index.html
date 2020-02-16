@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
   <head>
     <title>R and data science for public policies</title>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <meta name="author" content="Joël Gombin, Datactivist" />
     <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="libs/remark-css-0.0.1/datactivist.css" rel="stylesheet" />
     <link href="libs/remark-css-0.0.1/datactivist-fonts.css" rel="stylesheet" />
-    <script src="libs/htmlwidgets-1.3/htmlwidgets.js"></script>
+    <script src="libs/htmlwidgets-1.5.1/htmlwidgets.js"></script>
     <script src="libs/pymjs-1.3.2/pym.v1.js"></script>
     <script src="libs/widgetframe-binding-0.3.1/widgetframe.js"></script>
   </head>
@@ -18,7 +18,7 @@ class: center, middle, inverse, title-slide
 # R and data science for public policies
 ## Advanced session
 ### Joël Gombin, Datactivist
-### 21 &amp; 22 January 2019
+### 17 &amp; 18 January 2020
 
 ---
 
@@ -33,12 +33,12 @@ layout: true
 
 class: center, middle
 
-Ces slides en ligne : https://joelgombin.github.io/scpocodingweek/slides/
+This slidedeck online : https://joelgombin.github.io/scpocodingweek/slides/
 
 Sources : https://github.com/joelgombin/scpocodingweek
 
 
-Les productions de Datactivist sont librement réutilisables selon les termes de la licence [Creative Commons 4.0 BY-SA](https://creativecommons.org/licenses/by-sa/4.0/legalcode.fr).
+Datactivist's (and my) work is placed under a [Creative Commons 4.0 BY-SA](https://creativecommons.org/licenses/by-sa/4.0/legalcode.fr) licence.
 
 &lt;BR&gt;
 &lt;BR&gt;
@@ -146,12 +146,14 @@ class: inverse, center, middle
 ---
 ## The datascience workflow
 
-&lt;img src="./img/data-science-explore.png" width="90%" style="display: block; margin: auto;" /&gt;
+.center[
+[![](./img/data-science.png)](https://r4ds.had.co.nz/introduction.html)
+]
 
 ---
 ## Installing the tidyverse
 
-- The `tidyverse` (ou hadleyverse) helps making the workflow working
+- The `{tidyverse}` helps making the workflow working
 
 * In order to install the tidyverse, type: `install.packages("tidyverse")` (or through Rstudio)
 
@@ -162,7 +164,7 @@ class: inverse, center, middle
 
 - button "Import dataset"
 
-- through the CLI: the `readr` for CSV, `haven` for SPSS / SAS / Stata, `readxl` for XLS(X), `rio` for (almost) everything else. 
+- through the CLI: the `{readr}` package for CSV/text files, `{haven}` for SPSS / SAS / Stata, `{readxl}` for XLS(X), `{rio}` for (almost) everything else. 
 
 ---
 ## Import your first dataset
@@ -246,16 +248,16 @@ If needed, adjust the import process with arguments `col_types`, `locale` or `na
 ---
 ## Pivoting
 
-`gather` &amp; `spread`
+[`tidyr::pivot_longer` &amp; `tidyr::pivot_wider`](https://tidyr.tidyverse.org/articles/pivot.html)
 
 &lt;img src="http://r4ds.had.co.nz/images/tidy-9.png" width="90%" style="display: block; margin: auto;" /&gt;
 
 ---
 ## Recoding data
 
-- `recode`
+- [`recode`](https://dplyr.tidyverse.org/reference/recode.html)
 
-- `case_when`
+- [`case_when`](https://dplyr.tidyverse.org/reference/case_when.html)
 
 ---
 ## Merging datasets
@@ -333,7 +335,6 @@ rne %&gt;%
 ```
 
 ---
----
 ## dplyr tips &amp; tricks 
 
 
@@ -380,9 +381,8 @@ class: inverse, center, middle
 
 - small multiples (`facet`)
 
-- a thème (`theme`)
+- a `theme`
 
----
 
 ---
 ## The main `geom`s
@@ -403,7 +403,7 @@ class: inverse, center, middle
 
 - `geom_bar`
 
-- and even `geom_sf` in conjonction with the `sf` package
+- and even `geom_sf` in conjonction with the `sf` package for spatial data
 
 ---
 ## the main `aes`thetics
@@ -445,37 +445,36 @@ Simple features (sf) are:
 ---
 ## Import spatial data
 
-Source: https://opendata.paris.fr/explore/dataset/sanisettesparis2011/export/
+Source: https://opendata.paris.fr/explore/dataset/velib-disponibilite-en-temps-reel/export/
 
 
 ```r
 library(sf)
-toilets &lt;- read_sf("./data/sanisettesparis2011.geojson")
-toilets
+velib &lt;- read_sf("./data/velib-disponibilite-en-temps-reel.geojson")
+velib
 ```
 
 ```
-## Simple feature collection with 395 features and 9 fields
+## Simple feature collection with 1398 features and 12 fields
 ## geometry type:  POINT
 ## dimension:      XY
-## bbox:           xmin: 2.254611 ymin: 48.81898 xmax: 2.441133 ymax: 48.90113
+## bbox:           xmin: 2.165597 ymin: 48.76467 xmax: 2.538242 ymax: 48.94702
 ## epsg (SRID):    4326
 ## proj4string:    +proj=longlat +datum=WGS84 +no_defs
-## # A tibble: 395 x 10
-##    objectid arrondissement nom_voie      y      x numero_voie identifiant
-##       &lt;int&gt; &lt;chr&gt;          &lt;chr&gt;     &lt;dbl&gt;  &lt;dbl&gt; &lt;chr&gt;       &lt;chr&gt;      
-##  1       10 02             BOULEVA… 1.29e5 6.01e5 85          2/102      
-##  2       12 02             RUE REA… 1.30e5 6.01e5 73          2/105      
-##  3       13 02             BOULEVA… 1.30e5 6.01e5 109         2/106      
-##  4       16 02             BOULEVA… 1.30e5 5.99e5 37          2/111      
-##  5       22 02             RUE MON… 1.30e5 6.00e5 117         2/123      
-##  6       36 04             RUE DE … 1.29e5 6.01e5 10bis       4/107      
-##  7       40 04             RUE DE … 1.28e5 6.01e5 face 50     4/122      
-##  8       41 04             RUE SAI… 1.28e5 6.02e5 123         4/127      
-##  9       42 04             RUE SAI… 1.29e5 6.01e5 123         4/130      
-## 10       45 05             BOULEVA… 1.27e5 6.00e5 88 ter      5/103      
-## # … with 385 more rows, and 3 more variables: horaires_ouverture &lt;chr&gt;,
-## #   geom_x_y &lt;list&gt;, geometry &lt;POINT [°]&gt;
+## # A tibble: 1,398 x 13
+##    nbfreeedock station_state overflowactivat… station_code nbedock nbbikeoverflow nbbike nbebike station_name creditcard kioskstate
+##          &lt;int&gt; &lt;chr&gt;         &lt;chr&gt;            &lt;chr&gt;          &lt;int&gt;          &lt;int&gt;  &lt;int&gt;   &lt;int&gt; &lt;chr&gt;        &lt;chr&gt;      &lt;chr&gt;     
+##  1          29 Operative     no               16107             35              0      3       3 Benjamin Go… no         yes       
+##  2          27 Operative     no               6015              52              0     17       7 André Mazet… yes        yes       
+##  3          19 Operative     no               11104             20              0      1       0 Charonne - … no         yes       
+##  4          16 Operative     no               9020              21              0      3       2 Toudouze - … yes        yes       
+##  5          25 Operative     no               12109             30              0      1       4 Mairie du 1… no         yes       
+##  6           5 Operative     no               5001               6              0     12       7 Harpe - Sai… yes        yes       
+##  7          51 Operative     no               14014             60              0      2       6 Jourdan - S… yes        yes       
+##  8           0 Operative     no               17026              0              0      4       7 Jouffroy d'… yes        yes       
+##  9          20 Operative     no               17041             38              0     10       8 Guersant - … yes        yes       
+## 10          21 Operative     no               10013             59              0     33       5 Alibert - J… yes        yes       
+## # … with 1,388 more rows, and 2 more variables: geo &lt;list&gt;, geometry &lt;POINT [°]&gt;
 ```
 
 ---
@@ -487,11 +486,11 @@ toilets
 
 ```r
 library(mapview)
-mapview(toilets)
+mapview(velib)
 ```
 
-<div id="htmlwidget-b25a3bd89ae666a2287a" style="width:100%;height:400px;" class="widgetframe html-widget"></div>
-<script type="application/json" data-for="htmlwidget-b25a3bd89ae666a2287a">{"x":{"url":"index_files/figure-html//widgets/widget_unnamed-chunk-9.html","options":{"xdomain":"*","allowfullscreen":false,"lazyload":false}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-588a0a21ae04e88f77ff" style="width:100%;height:400px;" class="widgetframe html-widget"></div>
+<script type="application/json" data-for="htmlwidget-588a0a21ae04e88f77ff">{"x":{"url":"index_files/figure-html//widgets/widget_unnamed-chunk-9.html","options":{"xdomain":"*","allowfullscreen":false,"lazyload":false}},"evals":[],"jsHooks":[]}</script>
 
 ---
 ## Using spatial data
@@ -508,8 +507,8 @@ leaflet() %&gt;% addTiles() %&gt;% setView(-93.65, 42.0285, zoom = 4) %&gt;%
   )
 ```
 
-<div id="htmlwidget-b3e24be80f38c5551cf8" style="width:100%;height:250px;" class="widgetframe html-widget"></div>
-<script type="application/json" data-for="htmlwidget-b3e24be80f38c5551cf8">{"x":{"url":"index_files/figure-html//widgets/widget_unnamed-chunk-11.html","options":{"xdomain":"*","allowfullscreen":false,"lazyload":false}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-b2dfe89365859b61b10c" style="width:100%;height:250px;" class="widgetframe html-widget"></div>
+<script type="application/json" data-for="htmlwidget-b2dfe89365859b61b10c">{"x":{"url":"index_files/figure-html//widgets/widget_unnamed-chunk-11.html","options":{"xdomain":"*","allowfullscreen":false,"lazyload":false}},"evals":[],"jsHooks":[]}</script>
 
 ---
 ## Using `leaflet` for online maps
@@ -518,11 +517,11 @@ See https://rstudio.github.io/leaflet/
 
 
 ```r
-toilets %&gt;% leaflet() %&gt;% addTiles() %&gt;% addCircleMarkers(radius = 2, color = "red")
+velib %&gt;% leaflet() %&gt;% addTiles() %&gt;% addCircleMarkers(radius = 2, color = "red")
 ```
 
-<div id="htmlwidget-3823782c915047ba6158" style="width:100%;height:300px;" class="widgetframe html-widget"></div>
-<script type="application/json" data-for="htmlwidget-3823782c915047ba6158">{"x":{"url":"index_files/figure-html//widgets/widget_unnamed-chunk-13.html","options":{"xdomain":"*","allowfullscreen":false,"lazyload":false}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-6d372927c5af46635564" style="width:100%;height:300px;" class="widgetframe html-widget"></div>
+<script type="application/json" data-for="htmlwidget-6d372927c5af46635564">{"x":{"url":"index_files/figure-html//widgets/widget_unnamed-chunk-13.html","options":{"xdomain":"*","allowfullscreen":false,"lazyload":false}},"evals":[],"jsHooks":[]}</script>
 
 ---
 ## Using `tmap` for elaborate maps
@@ -577,6 +576,7 @@ class: inverse, center, middle
 
 Contact : [joel@datactivist.coop](mailto:joel@datactivist.coop)
     </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
 <script>var slideshow = remark.create({
 "highlightStyle": "github",
@@ -586,26 +586,79 @@ Contact : [joel@datactivist.coop](mailto:joel@datactivist.coop)
 if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
   window.dispatchEvent(new Event('resize'));
 });
-(function() {
-  var d = document, s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
   if (!r) return;
   s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
   d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
 })();</script>
 
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-  tex2jax: {
-    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+<script>
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
   }
-});
+})();
+</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
 </script>
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>
 (function () {
   var script = document.createElement('script');
   script.type = 'text/javascript';
-  script.src  = 'https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
   if (location.protocol !== 'file:' && /^https?:/.test(script.src))
     script.src  = script.src.replace(/^https?:/, '');
   document.getElementsByTagName('head')[0].appendChild(script);
