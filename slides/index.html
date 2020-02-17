@@ -18,7 +18,7 @@ class: center, middle, inverse, title-slide
 # R and data science for public policies
 ## Advanced session
 ### Joël Gombin, Datactivist
-### 17 &amp; 18 January 2020
+### 17 &amp; 18 February 2020
 
 ---
 
@@ -93,6 +93,22 @@ class: inverse, center, middle
 - using APIs
 
 - wrap-up, tips &amp; tricks
+
+---
+## Where can I find help?
+
+The R community is very welcoming and helpful. Don't be shy, and ask for help - all the pros do!
+
+Good starting points are:
+
+- Google (duh)
+- twitter #Rstats or #RstatsFR
+- The [Rstudio Community](https://community.rstudio.com/) forum
+- [StackOverflow](https://stackoverflow.com/questions/tagged/r)
+- Some Slack channels, for example https://r-grrr.slack.com/ (in French - let me know if you want an invite)
+- the github repo of the package you're having troubles with
+
+When you ask for help, it is a **great** idea to prepare a [minimal **rep**roducible **ex**ample](https://resources.rstudio.com/webinars/help-me-help-you-creating-reproducible-examples-jenny-bryan) (reprex)
 
 ---
 class: inverse, center, middle
@@ -491,8 +507,8 @@ library(mapview)
 mapview(velib, cex = "nbbike")
 ```
 
-<div id="htmlwidget-b6dfd4fb7bfefa6b128c" style="width:100%;height:400px;" class="widgetframe html-widget"></div>
-<script type="application/json" data-for="htmlwidget-b6dfd4fb7bfefa6b128c">{"x":{"url":"index_files/figure-html//widgets/widget_unnamed-chunk-8.html","options":{"xdomain":"*","allowfullscreen":false,"lazyload":false}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-6f20eb265645cc99a254" style="width:100%;height:400px;" class="widgetframe html-widget"></div>
+<script type="application/json" data-for="htmlwidget-6f20eb265645cc99a254">{"x":{"url":"index_files/figure-html//widgets/widget_unnamed-chunk-8.html","options":{"xdomain":"*","allowfullscreen":false,"lazyload":false}},"evals":[],"jsHooks":[]}</script>
 
 ---
 ## Using spatial data
@@ -509,8 +525,8 @@ leaflet() %&gt;% addTiles() %&gt;% setView(-93.65, 42.0285, zoom = 4) %&gt;%
   )
 ```
 
-<div id="htmlwidget-d173e9d0613ef005ea62" style="width:100%;height:250px;" class="widgetframe html-widget"></div>
-<script type="application/json" data-for="htmlwidget-d173e9d0613ef005ea62">{"x":{"url":"index_files/figure-html//widgets/widget_unnamed-chunk-10.html","options":{"xdomain":"*","allowfullscreen":false,"lazyload":false}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-2df4dda6fe2bff9feee3" style="width:100%;height:250px;" class="widgetframe html-widget"></div>
+<script type="application/json" data-for="htmlwidget-2df4dda6fe2bff9feee3">{"x":{"url":"index_files/figure-html//widgets/widget_unnamed-chunk-10.html","options":{"xdomain":"*","allowfullscreen":false,"lazyload":false}},"evals":[],"jsHooks":[]}</script>
 
 ---
 ## Using `leaflet` for online maps
@@ -522,8 +538,8 @@ See https://rstudio.github.io/leaflet/
 velib %&gt;% leaflet() %&gt;% addTiles() %&gt;% addCircleMarkers(radius = 2, color = "red")
 ```
 
-<div id="htmlwidget-c112fc6031eded0455e3" style="width:100%;height:300px;" class="widgetframe html-widget"></div>
-<script type="application/json" data-for="htmlwidget-c112fc6031eded0455e3">{"x":{"url":"index_files/figure-html//widgets/widget_unnamed-chunk-12.html","options":{"xdomain":"*","allowfullscreen":false,"lazyload":false}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-5d385faf13b152d343ec" style="width:100%;height:300px;" class="widgetframe html-widget"></div>
+<script type="application/json" data-for="htmlwidget-5d385faf13b152d343ec">{"x":{"url":"index_files/figure-html//widgets/widget_unnamed-chunk-12.html","options":{"xdomain":"*","allowfullscreen":false,"lazyload":false}},"evals":[],"jsHooks":[]}</script>
 
 ---
 ## Using `tmap` for elaborate maps

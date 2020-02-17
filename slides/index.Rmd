@@ -2,7 +2,7 @@
 title: "R and data science for public policies"
 subtitle: "Advanced session"
 author: "Joël Gombin, Datactivist"
-date: "17 & 18 January 2020"
+date: "17 & 18 February 2020"
 output:
   SlidesDatactivist::moon_reader:
     css: [default, datactivist, datactivist-fonts]
@@ -86,6 +86,22 @@ class: inverse, center, middle
 - using APIs
 
 - wrap-up, tips & tricks
+
+---
+## Where can I find help?
+
+The R community is very welcoming and helpful. Don't be shy, and ask for help - all the pros do!
+
+Good starting points are:
+
+- Google (duh)
+- twitter #Rstats or #RstatsFR
+- The [Rstudio Community](https://community.rstudio.com/) forum
+- [StackOverflow](https://stackoverflow.com/questions/tagged/r)
+- Some Slack channels, for example https://r-grrr.slack.com/ (in French - let me know if you want an invite)
+- the github repo of the package you're having troubles with
+
+When you ask for help, it is a **great** idea to prepare a [minimal **rep**roducible **ex**ample](https://resources.rstudio.com/webinars/help-me-help-you-creating-reproducible-examples-jenny-bryan) (reprex)
 
 ---
 class: inverse, center, middle
