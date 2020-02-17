@@ -34,7 +34,25 @@ data %>%
   View
 
 
+data %>% 
+  pivot_longer(cols = `Conseiller Municipal`:Maire, names_to = "mandat") %>% 
+  filter(value %in% TRUE) %>% 
+  View
 
 
+data %>% 
+  pivot_longer(cols = `Conseiller Municipal`:Maire, names_to = "mandat") %>% 
+  filter(value %in% TRUE) %>% 
+  group_by(Identifiant) %>% 
+  mutate(nb_mandat = n()) %>% 
+  View
+
+external_table <- data %>% 
+  distinct(`Code sexe`) %>% 
+  mutate(label = c("female", "male"))
+
+data %>% 
+  left_join(external_table, by = c("Code sexe" = "Code sexe")) %>% 
+  View
 
 
