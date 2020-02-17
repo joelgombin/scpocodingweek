@@ -203,7 +203,7 @@ Download the dataset from https://www.data.gouv.fr/fr/datasets/donnees-du-repert
 
 ```r
 suppressPackageStartupMessages(library(tidyverse))
-rne &lt;- read_csv("./data/Repertoire-national-des-elus.csv")
+rne &lt;- read_csv("./data/Repertoire-national-des-elus.zip")
 ```
 
 ```
@@ -231,11 +231,11 @@ rne &lt;- read_csv("./data/Repertoire-national-des-elus.csv")
 ```
 ## Warning: 6 parsing failures.
 ##    row         col           expected actual                                      file
-## 118187 Identifiant delimiter or quote      Q './data/Repertoire-national-des-elus.csv'
-## 118187 Identifiant delimiter or quote        './data/Repertoire-national-des-elus.csv'
-## 234535 Identifiant delimiter or quote      G './data/Repertoire-national-des-elus.csv'
-## 234535 Identifiant delimiter or quote        './data/Repertoire-national-des-elus.csv'
-## 358097 Identifiant delimiter or quote      B './data/Repertoire-national-des-elus.csv'
+## 118187 Identifiant delimiter or quote      Q './data/Repertoire-national-des-elus.zip'
+## 118187 Identifiant delimiter or quote        './data/Repertoire-national-des-elus.zip'
+## 234535 Identifiant delimiter or quote      G './data/Repertoire-national-des-elus.zip'
+## 234535 Identifiant delimiter or quote        './data/Repertoire-national-des-elus.zip'
+## 358097 Identifiant delimiter or quote      B './data/Repertoire-national-des-elus.zip'
 ## ...... ........... .................. ...... .........................................
 ## See problems(...) for more details.
 ```
@@ -468,6 +468,13 @@ Source: https://opendata.paris.fr/explore/dataset/velib-disponibilite-en-temps-r
 
 ```r
 library(sf)
+```
+
+```
+## Linking to GEOS 3.5.1, GDAL 2.2.2, PROJ 4.9.2
+```
+
+```r
 velib &lt;- read_sf("./data/velib-disponibilite-en-temps-reel.geojson")
 velib
 ```
@@ -480,19 +487,21 @@ velib
 ## epsg (SRID):    4326
 ## proj4string:    +proj=longlat +datum=WGS84 +no_defs
 ## # A tibble: 1,398 x 13
-##    nbfreeedock station_state overflowactivat… station_code nbedock nbbikeoverflow nbbike nbebike station_name creditcard kioskstate
-##          &lt;int&gt; &lt;chr&gt;         &lt;chr&gt;            &lt;chr&gt;          &lt;int&gt;          &lt;int&gt;  &lt;int&gt;   &lt;int&gt; &lt;chr&gt;        &lt;chr&gt;      &lt;chr&gt;     
-##  1          29 Operative     no               16107             35              0      3       3 Benjamin Go… no         yes       
-##  2          27 Operative     no               6015              52              0     17       7 André Mazet… yes        yes       
-##  3          19 Operative     no               11104             20              0      1       0 Charonne - … no         yes       
-##  4          16 Operative     no               9020              21              0      3       2 Toudouze - … yes        yes       
-##  5          25 Operative     no               12109             30              0      1       4 Mairie du 1… no         yes       
-##  6           5 Operative     no               5001               6              0     12       7 Harpe - Sai… yes        yes       
-##  7          51 Operative     no               14014             60              0      2       6 Jourdan - S… yes        yes       
-##  8           0 Operative     no               17026              0              0      4       7 Jouffroy d'… yes        yes       
-##  9          20 Operative     no               17041             38              0     10       8 Guersant - … yes        yes       
-## 10          21 Operative     no               10013             59              0     33       5 Alibert - J… yes        yes       
-## # … with 1,388 more rows, and 2 more variables: geo &lt;list&gt;, geometry &lt;POINT [°]&gt;
+##    nbfreeedock station_state overflowactivat… station_code nbedock
+##          &lt;int&gt; &lt;chr&gt;         &lt;chr&gt;            &lt;chr&gt;          &lt;int&gt;
+##  1          29 Operative     no               16107             35
+##  2          27 Operative     no               6015              52
+##  3          19 Operative     no               11104             20
+##  4          16 Operative     no               9020              21
+##  5          25 Operative     no               12109             30
+##  6           5 Operative     no               5001               6
+##  7          51 Operative     no               14014             60
+##  8           0 Operative     no               17026              0
+##  9          20 Operative     no               17041             38
+## 10          21 Operative     no               10013             59
+## # … with 1,388 more rows, and 8 more variables: nbbikeoverflow &lt;int&gt;,
+## #   nbbike &lt;int&gt;, nbebike &lt;int&gt;, station_name &lt;chr&gt;, creditcard &lt;chr&gt;,
+## #   kioskstate &lt;chr&gt;, geo &lt;list&gt;, geometry &lt;POINT [°]&gt;
 ```
 
 ---
@@ -507,8 +516,13 @@ library(mapview)
 mapview(velib, cex = "nbbike")
 ```
 
-<div id="htmlwidget-6f20eb265645cc99a254" style="width:100%;height:400px;" class="widgetframe html-widget"></div>
-<script type="application/json" data-for="htmlwidget-6f20eb265645cc99a254">{"x":{"url":"index_files/figure-html//widgets/widget_unnamed-chunk-8.html","options":{"xdomain":"*","allowfullscreen":false,"lazyload":false}},"evals":[],"jsHooks":[]}</script>
+
+```
+## Loading required package: htmlwidgets
+```
+
+<div id="htmlwidget-143f4c166c2acc686bbd" style="width:100%;height:400px;" class="widgetframe html-widget"></div>
+<script type="application/json" data-for="htmlwidget-143f4c166c2acc686bbd">{"x":{"url":"index_files/figure-html//widgets/widget_unnamed-chunk-8.html","options":{"xdomain":"*","allowfullscreen":false,"lazyload":false}},"evals":[],"jsHooks":[]}</script>
 
 ---
 ## Using spatial data
@@ -525,8 +539,8 @@ leaflet() %&gt;% addTiles() %&gt;% setView(-93.65, 42.0285, zoom = 4) %&gt;%
   )
 ```
 
-<div id="htmlwidget-2df4dda6fe2bff9feee3" style="width:100%;height:250px;" class="widgetframe html-widget"></div>
-<script type="application/json" data-for="htmlwidget-2df4dda6fe2bff9feee3">{"x":{"url":"index_files/figure-html//widgets/widget_unnamed-chunk-10.html","options":{"xdomain":"*","allowfullscreen":false,"lazyload":false}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-c90e7df8d4642115084a" style="width:100%;height:250px;" class="widgetframe html-widget"></div>
+<script type="application/json" data-for="htmlwidget-c90e7df8d4642115084a">{"x":{"url":"index_files/figure-html//widgets/widget_unnamed-chunk-10.html","options":{"xdomain":"*","allowfullscreen":false,"lazyload":false}},"evals":[],"jsHooks":[]}</script>
 
 ---
 ## Using `leaflet` for online maps
@@ -538,8 +552,8 @@ See https://rstudio.github.io/leaflet/
 velib %&gt;% leaflet() %&gt;% addTiles() %&gt;% addCircleMarkers(radius = 2, color = "red")
 ```
 
-<div id="htmlwidget-5d385faf13b152d343ec" style="width:100%;height:300px;" class="widgetframe html-widget"></div>
-<script type="application/json" data-for="htmlwidget-5d385faf13b152d343ec">{"x":{"url":"index_files/figure-html//widgets/widget_unnamed-chunk-12.html","options":{"xdomain":"*","allowfullscreen":false,"lazyload":false}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-8750897642829227b7bd" style="width:100%;height:300px;" class="widgetframe html-widget"></div>
+<script type="application/json" data-for="htmlwidget-8750897642829227b7bd">{"x":{"url":"index_files/figure-html//widgets/widget_unnamed-chunk-12.html","options":{"xdomain":"*","allowfullscreen":false,"lazyload":false}},"evals":[],"jsHooks":[]}</script>
 
 ---
 ## Using `tmap` for elaborate maps

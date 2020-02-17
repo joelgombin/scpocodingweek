@@ -195,7 +195,7 @@ Download the dataset from https://www.data.gouv.fr/fr/datasets/donnees-du-repert
 
 ```{r }
 suppressPackageStartupMessages(library(tidyverse))
-rne <- read_csv("./data/Repertoire-national-des-elus.csv")
+rne <- read_csv("./data/Repertoire-national-des-elus.zip")
 
 ```
 
